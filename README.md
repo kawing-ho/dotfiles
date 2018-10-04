@@ -16,6 +16,7 @@ A collection of configuration files and whatnot
 - touchpad-indicator
 - comfortable-swipe-ubuntu
 - cool-retro-term
+- peek 
 
 
 ## Sec Tools
