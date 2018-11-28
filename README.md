@@ -41,4 +41,8 @@ A collection of configuration files and whatnot
 - HTTPSEverywhere
 - LeechBlock 
 
+## Unity Tweak Tool
+- setup window snapping
+- hotcorners
+- mouse auto-raise (sloppy/mouse) with 1/4 delay
 
