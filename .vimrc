@@ -17,7 +17,6 @@ set number
 " Set horizontal tracer
 set cursorline
 
-
 " PATHOGEN PLUGIN MANAGER
 set nocp
 execute pathogen#infect()
@@ -26,9 +25,19 @@ call pathogen#helptags()
 " NERDtree
 :map <C-n> :NERDTreeToggle<CR>
 autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+"autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " Filetype Indentation Things
 autocmd FileType html setlocal shiftwidth=2 tabstop=2
 autocmd FileType json setlocal shiftwidth=2 tabstop=2
 autocmd FileType python setlocal shiftwidth=3 tabstop=3
+
+" Filetype Color Things
+autocmd BufEnter *.php colorscheme Tomorrow-Night
+autocmd BufEnter *.py colorscheme Tomorrow
+autocmd BufEnter *.json colorscheme pablo
+autocmd BufEnter .vimrc colorscheme Tomorrow-Night-Blue
+
+
+" Get the Tomorrow colorscheme
+" https://github.com/chriskempson/tomorrow-theme/tree/master/vim/colors
