@@ -90,6 +90,6 @@ gitsave
 # alias vim='nvim'
 
 
-# AUtojump config stuff
+# Autojump config stuff
 [[ -s /home/wingz/.autojump/etc/profile.d/autojump.sh ]] && source /home/wingz/.autojump/etc/profile.d/autojump.sh
 
