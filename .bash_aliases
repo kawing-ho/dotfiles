@@ -59,8 +59,8 @@ alias offaslr='setarch `uname -m` -R /bin/bash'
 # alias finance="cd /home/wingz/Desktop/unistuff/FINANCE/"
 # alias projects="cd /home/wingz/Projects"
 
-alias tools="cd /home/wingz/Desktop/pastCTFs/tools"
-alias ctfs="cd /home/wingz/Desktop/pastCTFs"
+# alias tools="cd /home/wingz/Desktop/pastCTFs/tools"
+# alias ctfs="cd /home/wingz/Desktop/pastCTFs"
 
 
 alias vimcolors='ls /usr/share/vim/vim80/colors/'
@@ -85,11 +85,3 @@ export LESS_TERMCAP_us=$'\E[01;93m'	# Constants (less of this color)
 
 # Execution on start 
 gitsave
-
-# Still experimenting
-# alias vim='nvim'
-
-
-# Autojump config stuff
-[[ -s /home/wingz/.autojump/etc/profile.d/autojump.sh ]] && source /home/wingz/.autojump/etc/profile.d/autojump.sh
-
