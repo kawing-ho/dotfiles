@@ -1,5 +1,5 @@
 # EDITOR of choice
-export EDITOR='nano'
+export EDITOR=vim
 
 # Ignore the following commands in history
 export HISTIGNORE="clear:pwd:df:du:stat:file:shutdown:history:which:man:ls:nano:vim"
@@ -42,22 +42,22 @@ alias offaslr='setarch `uname -m` -R /bin/bash'
 
 
 # File jumppoints
-alias 2011="cd /home/wingz/Desktop/unistuff/SENG2011/"
-alias 6441="cd /home/wingz/Desktop/unistuff/COMP6441/"
-alias 2911="cd /home/wingz/Desktop/unistuff/COMP2911/"
-alias 2111="cd /home/wingz/Desktop/unistuff/COMP2111/"
-alias 3331="cd /home/wingz/Desktop/unistuff/COMP3331/"
-alias 1521="cd /home/wingz/Desktop/unistuff/COMP1521/"
-alias 2041="cd /home/wingz/Desktop/unistuff/COMP2041/"
-alias 3121="cd /home/wingz/Desktop/unistuff/COMP3121/"
-alias 6843="cd /home/wingz/Desktop/unistuff/COMP6843/"
-alias 3231="cd /home/wingz/Desktop/unistuff/COMP3231/"
-alias 4920="cd /home/wingz/Desktop/unistuff/COMP4920/"
-alias 6447="cd /home/wingz/Desktop/unistuff/COMP6447/"
-alias 6845="cd /home/wingz/Desktop/unistuff/COMP6845/"
-alias 3900="cd /home/wingz/Desktop/unistuff/COMP3900/"
-alias finance="cd /home/wingz/Desktop/unistuff/FINANCE/"
-alias projects="cd /home/wingz/Projects"
+# alias 2011="cd /home/wingz/Desktop/unistuff/SENG2011/"
+# alias 6441="cd /home/wingz/Desktop/unistuff/COMP6441/"
+# alias 2911="cd /home/wingz/Desktop/unistuff/COMP2911/"
+# alias 2111="cd /home/wingz/Desktop/unistuff/COMP2111/"
+# alias 3331="cd /home/wingz/Desktop/unistuff/COMP3331/"
+# alias 1521="cd /home/wingz/Desktop/unistuff/COMP1521/"
+# alias 2041="cd /home/wingz/Desktop/unistuff/COMP2041/"
+# alias 3121="cd /home/wingz/Desktop/unistuff/COMP3121/"
+# alias 6843="cd /home/wingz/Desktop/unistuff/COMP6843/"
+# alias 3231="cd /home/wingz/Desktop/unistuff/COMP3231/"
+# alias 4920="cd /home/wingz/Desktop/unistuff/COMP4920/"
+# alias 6447="cd /home/wingz/Desktop/unistuff/COMP6447/"
+# alias 6845="cd /home/wingz/Desktop/unistuff/COMP6845/"
+# alias 3900="cd /home/wingz/Desktop/unistuff/COMP3900/"
+# alias finance="cd /home/wingz/Desktop/unistuff/FINANCE/"
+# alias projects="cd /home/wingz/Projects"
 
 alias tools="cd /home/wingz/Desktop/pastCTFs/tools"
 alias ctfs="cd /home/wingz/Desktop/pastCTFs"
@@ -87,7 +87,7 @@ export LESS_TERMCAP_us=$'\E[01;93m'	# Constants (less of this color)
 gitsave
 
 # Still experimenting
-alias vim='nvim'
+# alias vim='nvim'
 
 
 # AUtojump config stuff
