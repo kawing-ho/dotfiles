@@ -71,6 +71,9 @@ set -g base-index 1
 # start with pane 1
 set -g pane-base-index 1
 
+# maybe this will fix the font issue...
+set-window-option -g utf8 on
+
 # use vi mode - not sure what these do...
 setw -g mode-keys vi
 set -g status-keys vi
@@ -206,8 +209,6 @@ set -g status-interval 60
 #End of status line messages
 #-------------------------------------------------------#
 
-
-
 #-------------------------------------------------------#
 #tmux resurrect
 #https://github.com/tmux-plugins/tmux-resurrect
@@ -239,9 +240,6 @@ bind-key -T prefix C-r confirm-before -p 'Resurrect last tmux session? (y/n)' 'r
 #end of tmux resurrect
 #-------------------------------------------------------#
 
-
-
-
 #-------------------------------------------------------#
 #reattach-to-user-namespace must be installed
 #
@@ -269,36 +267,11 @@ if-shell 'test "$(uname)" = "Darwin"' 'source ~/.tmux-osx.conf'
 # 9) compile and exit IF SUCCESSFUL
 # otherwise type 'x'
 
-
-#for pdflatex use F6
-#if no swap file in vim, using the following line in vimrc:
-#    set noswapfile
-# then this will work
-bind-key -n F6 send-keys Escape :w C-m \; split-window -v -p 20 -c '#{pane_current_path}' \; send-keys clear C-m\; send-keys 'thistexfile=$(ls -1t *.tex | head -1)' C-m \; send-keys 'pdflatex $thistexfile && exit' C-m 
-
-#if there are swap files, then use this:
-#bind-key -n F6 send-keys Escape :w C-m \; split-window -v -p 20 -c '#{pane_current_path}'\; send-keys clear C-m\; send-keys 'thistexfile=$(ls -1t *.tex | head -1)' C-m \; send-keys 'swppre=.' C-m \; send-keys 'swpext=.swp' C-m \; send-keys 'swpfile=$swppre$thistexfile$swpext' C-m \; send-keys 'rm $swpfile' C-m \; send-keys 'pdflatex $thistexfile && exit' C-m 
-
-
-#for xelatex use F5
-bind-key -n F5 send-keys Escape :w C-m \; split-window -v -p 20 -c '#{pane_current_path}' \; send-keys clear C-m\; send-keys 'thistexfile=$(ls -1t *.tex | head -1)' C-m \; send-keys 'xelatex $thistexfile && exit' C-m 
-
-
-#for masterfile use F7, 
-#if main file is main.tex, then there create an (empty) file: main.text.latexmaster 
-#if no .latexmaster file, then nothing happens
-bind-key -n F7 send-keys Escape :w C-m \; split-window -v -p 20  -c '#{pane_current_path}' \; send-keys 'thistexfile=$(ls -1t *.tex | head -1)' C-m \; send-keys 'mastertexfile=$(ls -1t *.latexmaster | head -1)' C-m \; send-keys 'echo $mastertexfile' C-m  \; send-keys clear C-m \; send-keys 'texfiletocompile=`echo $mastertexfile | sed -E ' \; send-keys "'s/(.*).latexmaster(.*)/\\1/'`" C-m  \; send-keys 'if [ -z "$texfiletocompile" ] ; then exit ;  else pdflatex $texfiletocompile && exit; fi' C-m
-#extra C-m does not help
-#; send-keys C-m
-
-
-#for bibtex use F8
-bind-key -n F8 send-keys Escape :w C-m \; split-window -v -p 20 -c '#{pane_current_path}'   \; send-keys 'thistexfile=$(ls -1t *.tex | head -1)' C-m \; send-keys clear C-m \; send-keys 'thisfilebase=`echo $thistexfile | sed -E ' \; send-keys "'s/(.*).tex(.*)/\\1/'`" C-m  \; send-keys 'echo $thisfilebase' C-m \; send-keys 'auxext=.aux' C-m \; send-keys 'thisauxfile=$thisfilebase$auxext' C-m \; send-keys 'echo $thisauxfile' C-m \; send-keys 'bibtex $thisauxfile && exit || printf "\nError while compiling $thisauxfile ; perhaps no .bib file/references for $thistexfile \n\n"' C-m
-
 # copy to system clipboard
 # CTRL + A + [  ////  Press Space ////  Arrow keys to highlight //// Press y to Yank //// Paste as usual
 bind -Tcopy-mode-vi y send -X copy-pipe 'xclip -in -selection clipboard'
 #bind -Tcopy-mode-vi y send -X copy-selection
 
 ### End of tmux.conf
-### Version 1 November 2017
+### Version 7 Jan 2019
+
