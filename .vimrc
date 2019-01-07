@@ -1,4 +1,3 @@
-
 " Aint nobody got time for ESCAPE-ing
 :imap jk <Esc>
 :imap kj <Esc>
@@ -31,13 +30,36 @@ set cursorline
 autocmd FileType html setlocal shiftwidth=2 tabstop=2
 autocmd FileType json setlocal shiftwidth=2 tabstop=2
 autocmd FileType python setlocal shiftwidth=3 tabstop=3
+autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
+
+" Default color
+color eink
 
 " Filetype Color Things
 autocmd BufEnter *.php colorscheme Tomorrow-Night
 autocmd BufEnter *.py colorscheme Tomorrow
-autocmd BufEnter *.json colorscheme pablo
+autocmd BufEnter *.json colorscheme pink  "dual woju pink bluedrake moss muon wikipedia
 autocmd BufEnter .vimrc colorscheme Tomorrow-Night-Blue
+autocmd BufEnter *.js colorscheme miko "mayansmoke
+autocmd BufEnter *.tf colorscheme donttouchme
+autocmd BufEnter *.html colorscheme Tomorrow-Night-Eighties
+"autocmd BufEnter *.sh colorscheme newspaper
+autocmd BufEnter *.sh colorscheme messy "tatami
+autocmd BufEnter *.bash* colorscheme messy "tatami
+autocmd BufEnter .tmux.conf colorscheme woju
+autocmd BufEnter *.md colorscheme PaperColor
+autocmd BufEnter *config colorscheme madeofcode
 
+" Light backgrounds
+set background=light
 
-" Get the Tomorrow colorscheme
-" https://github.com/chriskempson/tomorrow-theme/tree/master/vim/colors
+set expandtab
+set autoindent
+
+" reduce the buffer caused by .swp files / risky for data loss though
+set nobackup
+set noswapfile
+
+" HTML syntax highlighting
+highlight link htmlTag htmlTagName
+highlight link htmlEndTag htmlTagName
