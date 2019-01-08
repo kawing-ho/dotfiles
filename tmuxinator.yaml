@@ -1,0 +1,25 @@
+name: work
+root: ~/
+
+windows:
+  - stemn:
+      root: ~/backend
+      layout: main-vertical
+      panes:
+        - vim
+        - ls
+  - playground:
+      root: ~/Projects/terraocean
+      layout: main-vertical
+      panes:
+        - ssh playground
+        - terraform refresh
+        - ls -l
+  - monitoring:
+      layout: tiled
+      panes:
+        - ls
+        - ssh -t cse "vim -c 'colorscheme zellner' + public_html/abcdefg/temp; /bin/bash --rcfile ~/.profile -i"
+        - python
+        - htop
+        
