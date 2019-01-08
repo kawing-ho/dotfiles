@@ -51,6 +51,7 @@ bind F4 \
 bind -r b previous-window
 bind -r n next-window
 bind -r p last-window
+bind -n C-n next-window
 
 #-------------------------------------------------------#
 
@@ -108,6 +109,7 @@ bind - split-window -v -c '#{pane_current_path}'
 
 # open new panes in current path
 bind c new-window -c '#{pane_current_path}'
+bind C kill-session
 
 # Use Alt-arrow keys WITHOUT PREFIX KEY to switch panes
 bind -n M-Left select-pane -L
@@ -199,7 +201,7 @@ setw -g window-status-attr dim
 # Status line right side
 # 15% | 28 Nov 18:15
 # e.g.  28 Nov 18:15
-set -g status-right "#[fg=colour245]%A, %d %b #[fg=colour256]%I:%M %p (#[fg=colour256]#(cat /tmp/weather | cut -d: -f3 | cut -d',' -f1 | grep -o "[0-9]*")°C | #(battery)) "
+set -g status-right "#[fg=colour245]%a, %d %b  #[fg=colour117,bg=colour0]%I:%M %p#[fg=colour245,bg=colour0] #[fg=colour119,bg=colour0] #(cat /tmp/weather | cut -d: -f3 | cut -d',' -f1 | grep -o "[0-9]*")°C #[fg=colour245,bg=colour0] #[fg=colour213,bg=colour0]#(battery)#[fg=colour245,bg=colour0] "
 
 # Update the status bar every sixty seconds
 # For the time
