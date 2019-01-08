@@ -38,22 +38,31 @@ color eink
 
 " Filetype Color Things
 autocmd BufEnter *.php colorscheme Tomorrow-Night
-autocmd BufEnter *.py colorscheme zenburn "Tomorrow
-autocmd BufEnter *.json colorscheme pink  "dual woju pink bluedrake moss muon wikipedia
-autocmd BufEnter .vimrc colorscheme Tomorrow-Night-Blue
+autocmd BufEnter *.py colorscheme afterglow
+autocmd BufEnter *.json colorscheme cherryblossom
 autocmd BufEnter *.js colorscheme miko "mayansmoke
-autocmd BufEnter *.tf colorscheme donttouchme "woju
+autocmd BufEnter *.tf colorscheme donttouchme
 autocmd BufEnter *.txt colorscheme nofrils-acme
 autocmd BufEnter *.html colorscheme Tomorrow-Night-Eighties
-"autocmd BufEnter *.sh colorscheme newspaper
-autocmd BufEnter *.sh colorscheme messy "tatami
-autocmd BufEnter *.bash* colorscheme messy "tatami
-autocmd BufEnter .tmux.conf colorscheme astronaut "muon
+autocmd BufEnter .tmux.conf colorscheme astronaut
 autocmd BufEnter *.md colorscheme PaperColor
+autocmd BufEnter .vimrc colorscheme Tomorrow-Night-Blue
 autocmd BufEnter *config colorscheme madeofcode
+autocmd BufEnter *yml colorscheme vice
 
-" == Light backgrounds ==
-set background=light
+" Automagically set theme(s) according to time of day (for selected filetypes)
+let hour = strftime("%H")
+if 6 < hour && hour < 21
+  set background=light
+  autocmd BufEnter *.sh colorscheme OceanicNextLight
+  autocmd BufEnter *.bash* colorscheme OceanicNextLight
+
+else
+  set background=dark
+  autocmd BufEnter *.sh colorscheme OceanicNext
+  autocmd BufEnter *.bash* colorscheme OceanicNext
+
+endif
 
 set expandtab
 set autoindent
