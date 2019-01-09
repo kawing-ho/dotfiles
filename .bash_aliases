@@ -97,8 +97,13 @@ gitsave
 # tmuxinator completions
 source ~/.local/bin/tmuxinator.bash
 
-# Autojump config stuff
 [[ -s /home/wingz/.autojump/etc/profile.d/autojump.sh ]] && source /home/wingz/.autojump/etc/profile.d/autojump.sh
+
+# set remote host PS1 to different one
+if [ -n "$SSH_CLIENT" ]
+then
+  PS1='${debian_chroot:+($debian_chroot)}\[\033[01;31m\]\u\[\033[00m\]\[\033[01;35m\]@\h\[\033[00m\]: \[\033[04;35m\] \w\[\033[00m\] \$ '
+fi
 
 
 # TERRAFORM
