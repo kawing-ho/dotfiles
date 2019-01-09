@@ -1,13 +1,16 @@
 name: work
 root: ~/
 
+# tmux italics issue again
+tmux_command: env TERM=screen-256color tmux
+
 windows:
   - stemn:
-      root: ~/backend
-      layout: main-vertical
+      root: ~/yarn
+      layout: even-vertical
       panes:
-        - vim
-        - ls
+        - ls -l
+        - vim ~/.yarn/lib/cli.js
   - playground:
       root: ~/Projects/terraocean
       layout: main-vertical
