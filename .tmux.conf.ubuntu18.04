@@ -52,6 +52,7 @@ bind -r b previous-window
 bind -r n next-window
 bind -r p last-window
 bind -n C-n next-window
+bind -n C-b previous-window
 
 #-------------------------------------------------------#
 
