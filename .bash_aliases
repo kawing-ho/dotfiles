@@ -62,6 +62,7 @@ alias 6845="cd /home/wingz/Desktop/unistuff/COMP6845/"
 alias 3900="cd /home/wingz/Desktop/unistuff/COMP3900/"
 alias finance="cd /home/wingz/Desktop/unistuff/FINANCE/"
 alias projects="cd /home/wingz/Projects"
+alias terra="cd /home/wingz/Projects/terraocean"
 
 alias youtube="cd /media/Acer/Users/gavin/Videos/youtube"
 alias tools="cd /home/wingz/Desktop/pastCTFs/tools"
@@ -95,7 +96,7 @@ gitsave
 #alias vim='nvim'
 
 # tmuxinator completions
-source ~/.local/bin/tmuxinator.bash
+[ -f ~/.local/bin/tmuxinator.bash ] && source ~/.local/bin/tmuxinator.bash
 
 [[ -s /home/wingz/.autojump/etc/profile.d/autojump.sh ]] && source /home/wingz/.autojump/etc/profile.d/autojump.sh
 
