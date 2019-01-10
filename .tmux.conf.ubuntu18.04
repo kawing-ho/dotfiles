@@ -166,7 +166,8 @@ set -g status-bg black
 #-------------------------------------------------------#
 # enable activity alerts
 setw -g monitor-activity on
-set -g visual-activity on
+# set -g visual-activity on
+set -g visual-activity off
 
 #Show reloaded message in bright white 
 set -g message-fg white
