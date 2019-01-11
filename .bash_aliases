@@ -29,6 +29,7 @@ alias src="source ~/.bashrc"
 alias vimrc="vim ~/.vimrc"
 alias bashrc="vim ~/.bash_aliases"
 alias tmux="env TERM=screen-256color tmux"
+alias logout="gnome-session-quit"
 
 alias op='xdg-open'
 alias pingg='timeout 5 ping 8.8.8.8'
