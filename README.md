@@ -17,6 +17,7 @@ A collection of configuration files and whatnot
 - comfortable-swipe-ubuntu
 - cool-retro-term
 - peek 
+- autojump
 
 
 ## Sec Tools
@@ -37,7 +38,8 @@ A collection of configuration files and whatnot
 ## Firefox 
 - Adblock
 - LastPass
-- EditThisCookie
+- EditThisCookie (now known as CookieEditor)
+- FoxyProxy
 - HTTPSEverywhere
 - LeechBlock 
 
