@@ -64,8 +64,10 @@ else
 
 endif
 
+" tabbing and spacing settings
 set expandtab
 set autoindent
+set pastetoggle=<F2>
 
 " reduce the buffer caused by .swp files / risky for data loss though
 set nobackup
