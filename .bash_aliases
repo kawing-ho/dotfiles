@@ -31,6 +31,7 @@ alias bashrc="vim ~/.bash_aliases"
 alias tmux="env TERM=screen-256color tmux"
 alias logout="gnome-session-quit"
 alias lock="xdg-screensaver lock"
+alias blank="xset dpms force off"
 
 alias op='xdg-open'
 alias pingg='timeout 5 ping 8.8.8.8'
