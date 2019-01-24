@@ -280,6 +280,12 @@ if-shell 'test "$(uname)" = "Darwin"' 'source ~/.tmux-osx.conf'
 bind -Tcopy-mode-vi y send -X copy-pipe 'xclip -in -selection clipboard'
 #bind -Tcopy-mode-vi y send -X copy-selection
 
-### End of tmux.conf
-### Version 1 November 2017
+# List of plugins
+set -g @plugin 'tmux-plugins/tpm'
+set -g @plugin 'tmux-plugins/tmux-sensible'
 
+# the /etc/urlview/system.urlview file needs to be updated for "mozilla/firefox"
+set -g @plugin 'tmux-plugins/tmux-urlview'
+
+# Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
+run -b '~/.tmux/plugins/tpm/tpm'
