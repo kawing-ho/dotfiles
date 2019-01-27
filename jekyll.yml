@@ -1,0 +1,20 @@
+# to motivate myself to keep working on Jekyll haha
+
+name: jekyll
+root: ~/projects/kawing-ho.github.io/
+
+# tmux italics issue again
+tmux_command: env TERM=screen-256color tmux
+
+windows:
+  - edit+build:
+      layout: a06b,190x48,0,0{104x48,0,0,0,85x48,105,0[85x23,105,0,2,85x24,105,24,3]}
+      panes:
+        - vim index.html
+        - $HOME/gems/bin/jekyll build --watch
+        - $HOME/gems/bin/jekyll serve --port 4000
+  - docs:
+      layout: even-horizontal
+      panes:
+        - $HOME/gems/bin/jekyll docs
+        - htop
