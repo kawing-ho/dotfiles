@@ -1,5 +1,6 @@
 # EDITOR of choice
 export EDITOR=vim
+export BROWSER=firefox
 
 # Ignore the following commands in history
 export HISTIGNORE="clear:pwd:df:du:stat:file:shutdown:history:which:man:ls:nano:vim"
@@ -12,7 +13,7 @@ alias cls='clear;ls'
 alias sl='ls'
 alias pls='pwd;ls'
 alias build='gcc -Wall -Werror -O -o'
-alias j='jekyll'
+alias jl='/home/wingz/gems/bin/jekyll'
 alias rm='rm -i'
 alias g="egrep"
 alias rg='egrep -r'
@@ -80,8 +81,16 @@ highlight() {
    grep -E --color "$1|$" "$2"
 }
 
-alias hl="highlight"
+# cut a line from a file  (eg. cl 18 hello.txt)
+cl() {
+  sed "$1q;d" $2
+}
 
+cpl() {
+  sed "$1q;d" $2 | tr -d '\n' | xclip -sel clip
+}
+
+alias hl="highlight"
 
 # LESS COLORS
 export LESS_TERMCAP_mb=$'\E[01;92m'
@@ -100,7 +109,10 @@ gitsave
 
 # tmuxinator completions
 [ -f ~/.local/bin/tmuxinator.bash ] && source ~/.local/bin/tmuxinator.bash
+alias mux="tmuxinator"
 
+# autojump stuff
+[ -f /usr/share/autojump/autojump.sh ] && . /usr/share/autojump/autojump.sh
 [[ -s /home/wingz/.autojump/etc/profile.d/autojump.sh ]] && source /home/wingz/.autojump/etc/profile.d/autojump.sh
 
 # set remote host PS1 to different one
@@ -108,8 +120,3 @@ if [ -n "$SSH_CLIENT" ]
 then
   PS1='${debian_chroot:+($debian_chroot)}\[\033[01;31m\]\u\[\033[00m\]\[\033[01;35m\]@\h\[\033[00m\]: \[\033[04;35m\]\w\[\033[00m\] \$ '
 fi
-
-
-# TERRAFORM
-export TF_VAR_HOME="$HOME"
-export STEMN_YARN_LOGFILE="/tmp/logfile"
