@@ -49,6 +49,7 @@ autocmd BufEnter *.md colorscheme PaperColor
 autocmd BufEnter .vimrc colorscheme Tomorrow-Night-Blue
 autocmd BufEnter *config colorscheme madeofcode
 autocmd BufEnter *yml colorscheme vice
+autocmd BufEnter Dockerfile colorscheme maui
 
 " Automagically set theme(s) according to time of day (for selected filetypes)
 let hour = strftime("%H")
@@ -81,3 +82,6 @@ highlight link htmlEndTag htmlTagName
 " tmux italics fix
 set t_ZH=[3m
 set t_ZR=[23m
+
+" enable mouse scrolling inside of tmux !!! YASSS
+set mouse=a
