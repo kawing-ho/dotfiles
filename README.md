@@ -29,7 +29,10 @@ A collection of configuration files and whatnot
 - altdns
 - libc-database
 - volatility 
-- Autopsy (in Windows probbaly)
+- Autopsy (in Windows VM)
+- zsteg
+- foremost / binwalk
+
 
 ## AWS server ?
 - bashrc / profile
@@ -43,7 +46,7 @@ A collection of configuration files and whatnot
 - HTTPSEverywhere
 - LeechBlock 
 
-## Unity Tweak Tool
+## Unity Tweak Tool / Gnome Tweak Tool
 - setup window snapping
 - hotcorners
 - mouse auto-raise (sloppy/mouse) with 1/4 delay
