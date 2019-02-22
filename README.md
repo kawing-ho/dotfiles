@@ -25,6 +25,7 @@ A collection of configuration files and whatnot
 - rtv
 - jp2a
 - ctop / htop / iftop
+- tldr
 
 
 ## Sec Tools
