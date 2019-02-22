@@ -15,9 +15,16 @@ A collection of configuration files and whatnot
 - Audacious 
 - touchpad-indicator
 - comfortable-swipe-ubuntu
-- cool-retro-term
+- cool-retro-term (container Vantus maintained)
 - peek 
 - autojump
+- xournal 
+- mpv
+- modipy
+- mpv
+- rtv
+- jp2a
+- ctop / htop / iftop
 
 
 ## Sec Tools
