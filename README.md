@@ -58,3 +58,9 @@ A collection of configuration files and whatnot
 - hotcorners
 - mouse auto-raise (sloppy/mouse) with 1/4 delay
 
+## Stuff to backup before fresh installs
+
+- browser profiles/data
+- `.ssh` folder (all the keys !)
+- Pictures / Video/ Music (not super important tho)
+
