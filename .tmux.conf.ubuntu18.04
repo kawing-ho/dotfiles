@@ -205,7 +205,7 @@ setw -g window-status-current-bg colour175
 # Status line right side
 # 15% | 28 Nov 18:15
 # e.g.  28 Nov 18:15
-set -g status-right "#[fg=colour245]%a, %d %b  #[fg=colour117,bg=colour0]%I:%M %p#[fg=colour245,bg=colour0] #[fg=colour119,bg=colour0] #(cat /tmp/weather | cut -d: -f3 | cut -d',' -f1 | grep -o "[0-9]*")°C #[fg=colour245,bg=colour0] #[fg=colour213,bg=colour0]#(battery)#[fg=colour245,bg=colour0] "
+set -g status-right "#[fg=colour245]%a, %d %b  #[fg=colour117,bg=colour0]%I:%M %p#[fg=colour245,bg=colour0] #[fg=colour119,bg=colour0] #(cat /tmp/weather | cut -d: -f3 | cut -d',' -f1 | grep -o "[0-9]*")°C #[fg=colour245,bg=colour0] #[fg=colour213,bg=colour0]#(acpi -b | grep -o '[0-9]*%')#[fg=colour245,bg=colour0] "
 
 # Update the status bar every sixty seconds
 # For the time
