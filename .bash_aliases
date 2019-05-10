@@ -81,6 +81,10 @@ highlight() {
    grep -E --color "$1|$" "$2"
 }
 
+zzdns() {
+  cat "$1" | zdns A | g -v NX | jq ".name"
+}
+
 # cut a line from a file  (eg. cl 18 hello.txt)
 cl() {
   sed "$1q;d" $2
