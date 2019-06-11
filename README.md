@@ -27,9 +27,9 @@ A collection of configuration files and whatnot
 - ctop / htop / iftop
 - tldr
 
-
 ## Sec Tools
-- gobuster
+(With containerisation being a thing now its easy to just pull in tools like `gobuster`)
+- gobuster 
 - john
 - Burp Suite
 - IDA Free
@@ -42,17 +42,21 @@ A collection of configuration files and whatnot
 - foremost / binwalk
 
 
-## AWS server ?
+## AWS server
 - bashrc / profile
 - vim configs
 
-## Firefox 
+## Browser Extensions list
 - Adblock
 - LastPass
 - EditThisCookie (now known as CookieEditor)
-- FoxyProxy
+- FoxyProxy/OmegaProxySwitcher
 - HTTPSEverywhere
 - LeechBlock 
+- BuiltWith/Wappalyzer
+- UserAgent Editor
+- ModHeader
+- TextMarker Go
 
 ## Unity Tweak Tool / Gnome Tweak Tool
 - setup window snapping
@@ -63,5 +67,5 @@ A collection of configuration files and whatnot
 
 - browser profiles/data
 - `.ssh` folder (all the keys !)
-- Pictures / Video/ Music (not super important tho)
+- Pictures/Video/Music (not super important tho)
 
