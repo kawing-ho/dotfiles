@@ -47,6 +47,8 @@ alias gobuster="/home/wingz/go/bin/gobuster"
 alias disas="objdump -M intel -d"
 alias disar="objdump -R"
 alias offaslr='setarch `uname -m` -R /bin/bash'
+alias ccat='pygmentize -O bg=dark,style=colorful'
+alias gah='sudo $(history -p \!\!)'
 
 
 # File jumppoints
